@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portal de Notícias</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #1e1e1e;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #ccc;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 15px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    section {
+      padding: 40px 20px;
+    }
+
+    .entretenimento {
+      background-color: #f3e5f5;
+    }
+
+    .tecnologia {
+      background-color: #e3f2fd;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .noticias {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 15px;
+      flex: 1;
+    }
+
+    .card-content h3 {
+      margin-top: 0;
+      font-size: 18px;
+    }
+
+    .card-content p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .card-content a {
+      display: inline-block;
+      margin-top: 10px;
+      background-color: #6200ea;
+      color: white;
+      padding: 8px 12px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 13px;
+      transition: background-color 0.3s;
+    }
+
+    .card-content a:hover {
+      background-color: #3700b3;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Portal de Notícias</h1>
+    <nav>
+      <a href="#entretenimento">Entretenimento</a>
+      <a href="#tecnologia">Tecnologia</a>
+    </nav>
+  </header>
+
+  <!-- Seção Entretenimento -->
+  <section class="entretenimento" id="entretenimento">
+    <h2>Entretenimento</h2>
+    <div class="noticias">
+      <div class="card">
+        <img src="https://picsum.photos/seed/oscar/400/200" alt="Oscar">
+        <div class="card-content">
+          <h3>Oscar 2025: veja os indicados ao prêmio</h3>
+          <p>A lista de indicados ao Oscar foi divulgada com surpresas nas categorias principais.</p>
+          <a href="https://www.folha.uol.com.br/ilustrada/2025/02/oscar-2025-veja-os-indicados.shtml" target="_blank">Ler mais</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://picsum.photos/seed/netflix/400/200" alt="Netflix">
+        <div class="card-content">
+          <h3>Nova série da Netflix vira sucesso mundial</h3>
+          <p>"Sombras do Tempo" conquista o público com suspense e reviravoltas inesperadas.</p>
+          <a href="https://g1.globo.com/pop-arte/noticia/2025/03/01/serie-netflix-sombras-do-tempo.shtml" target="_blank">Ler mais</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://picsum.photos/seed/musica/400/200" alt="Top 10 músicas">
+        <div class="card-content">
+          <h3>Top 10 músicas pop da semana</h3>
+          <p>Confira as músicas mais tocadas no Spotify e Apple Music nesta semana.</p>
+          <a href="https://www.billboard.com.br/top-10-musicas-pop-semana/" target="_blank">Ler mais</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Tecnologia -->
+  <section class="tecnologia" id="tecnologia">
+    <h2>Tecnologia</h2>
+    <div class="noticias">
+      <div class="card">
+        <img src="https://picsum.photos/seed/ia/400/200" alt="IA">
+        <div class="card-content">
+          <h3>IA gera vídeos em tempo real</h3>
+          <p>Ferramenta da startup FlowAI cria vídeos completos a partir de descrições de texto.</p>
+          <a href="https://tecnologia.uol.com.br/noticias/redacao/2025/04/10/ia-video.htm" target="_blank">Ler mais</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://picsum.photos/seed/celular/400/200" alt="Smartphones">
+        <div class="card-content">
+          <h3>Melhores smartphones de 2025</h3>
+          <p>Veja o comparativo dos modelos mais potentes do mercado em testes de desempenho.</p>
+          <a href="https://canaltech.com.br/smartphone/melhores-smartphones-2025/" target="_blank">Ler mais</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://picsum.photos/seed/robo/400/200" alt="Robôs">
+        <div class="card-content">
+          <h3>Robôs domésticos ganham novas funções</h3>
+          <p>Modelos atuais já podem cozinhar, limpar e se integrar à rotina da família.</p>
+          <a href="https://olhardigital.com.br/2025/03/10/noticias/robos-domesticos-futuro/" target="_blank">Ler mais</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
