@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Validação de Formulário</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .mensagem {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    .positivo {
+      color: green;
+    }
+    .negativo {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Comparação de Números</h2>
+
+  <form id="formulario">
+    <label for="campoA">Campo A:</label>
+    <input type="number" id="campoA" name="campoA" required><br><br>
+
+    <label for="campoB">Campo B:</label>
+    <input type="number" id="campoB" name="campoB" required><br><br>
+
+    <button type="submit">Enviar</button>
+  </form>
+
+  <div id="mensagem" class="mensagem"></div>
+
+  <script>
+    const formulario = document.getElementById('formulario');
+    const mensagem = document.getElementById('mensagem');
+
+    formulario.addEventListener('submit', function(event) {
+      event.preventDefault(); // Evita o envio do formulário
+
+      const valorA = Number(document.getElementById('campoA').value);
+      const valorB = Number(document.getElementById('campoB').value);
+
+      if (valorB > valorA) {
+        mensagem.textContent = "Formulário válido: Campo B é maior que Campo A!";
+        mensagem.className = "mensagem positivo";
+      } else {
+        mensagem.textContent = "Formulário inválido: Campo B deve ser maior que Campo A.";
+        mensagem.className = "mensagem negativo";
+      }
+    });
+  </script>
+
+</body>
+</html>
