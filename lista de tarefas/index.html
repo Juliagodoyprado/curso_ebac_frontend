@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lista de Tarefas</title>
+  <link rel="stylesheet" href="main.css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script defer src="main.js"></script>
+</head>
+<body>
+  <main class="app-container">
+    <section class="todo-box">
+      <h1>🗂 Lista de Tarefas</h1>
+
+      <form id="todo-form" autocomplete="off">
+        <input
+          type="text"
+          id="todo-input"
+          placeholder="Digite uma nova tarefa..."
+          aria-label="Campo para nova tarefa"
+        />
+        <button type="submit">Adicionar</button>
+      </form>
+
+      <p class="error-message" id="error-message">Digite uma tarefa válida!</p>
+
+      <ul id="todo-list"></ul>
+
+      <footer class="footer">
+        <span id="task-count">0 tarefas pendentes</span>
+      </footer>
+    </section>
+  </main>
+</body>
+</html>
