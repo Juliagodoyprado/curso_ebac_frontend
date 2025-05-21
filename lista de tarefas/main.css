@@ -1,0 +1,121 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f3f6f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.app-container {
+  padding: 20px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.todo-box {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: #482a50;
+  outline: none;
+}
+
+button {
+  background: #482a50;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #482a50;
+}
+
+.error-message {
+  color: #d32f2f;
+  font-size: 14px;
+  display: none;
+  margin-top: -10px;
+  text-align: center;
+}
+
+ul#todo-list {
+  list-style: none;
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+ul#todo-list li {
+  background: #f9f9f9;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s;
+}
+
+ul#todo-list li.completed {
+  text-decoration: line-through;
+  background: #d0f0c0;
+  color: #555;
+}
+
+ul#todo-list li .remove-btn {
+  background: transparent;
+  border: none;
+  color: #dc3545;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+ul#todo-list li .remove-btn:hover {
+  color: #a71d2a;
+}
+
+.footer {
+  text-align: right;
+  font-size: 14px;
+  color: #666;
+}
