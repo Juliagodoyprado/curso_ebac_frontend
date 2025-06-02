@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Formulário de Cadastro Preto e Branco Robusto</title>
+  <!-- Bootstrap CSS via CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    /* Black & White Theme */
+    body {
+      background: #000000;  /* black background */
+      color: #ffffff;       /* white text */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .card {
+      background: #121212; /* very dark gray for card background */
+      border-radius: 1.2rem;
+      box-shadow: 0 8px 32px rgba(255, 255, 255, 0.1);
+      width: 100%;
+      max-width: 520px;
+      padding: 2.5rem 3rem;
+      border: 2px solid #ffffff;
+    }
+    .form-title {
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 2rem;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.2rem;
+      font-size: 2.5rem;
+      user-select: none;
+      text-shadow: 0 0 6px #fff;
+    }
+    label {
+      color: #dedede;
+      font-weight: 600;
+      font-size: 1.15rem;
+    }
+    input.form-control {
+      background-color: #222222;
+      border: 2px solid #666666;
+      color: #ffffff;
+      font-weight: 500;
+      font-size: 1.1rem;
+      padding: 0.75rem 1rem;
+      border-radius: 0.6rem;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    input.form-control:focus {
+      background-color: #000000;
+      border-color: #ffffff;
+      outline: none;
+      box-shadow: 0 0 8px 2px #ffffff;
+      color: #ffffff;
+    }
+    .form-control::placeholder {
+      color: #999999;
+      font-style: italic;
+    }
+    .invalid-feedback {
+      color: #ff4d4f;
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-top: 0.4rem;
+    }
+    .btn-primary {
+      background-color: #ffffff;
+      color: #000000;
+      font-weight: 700;
+      font-size: 1.25rem;
+      padding: 0.75rem 1rem;
+      border-radius: 0.75rem;
+      border: 2px solid #ffffff;
+      box-shadow: 0 0 10px #ffffff90;
+      transition: background-color 0.3s ease, color 0.3s ease, transform 0.15s ease;
+      user-select: none;
+    }
+    .btn-primary:hover,
+    .btn-primary:focus {
+      background-color: #000000;
+      color: #ffffff;
+      border-color: #ffffff;
+      box-shadow: 0 0 15px #ffffffcc;
+      transform: scale(1.05);
+      outline: none;
+    }
+    .btn-primary:active {
+      transform: scale(0.95);
+      box-shadow: 0 0 8px #ffffffbb;
+    }
+    @media (max-width: 576px) {
+      .card {
+        padding: 2rem 1.5rem;
+      }
+      .form-title {
+        font-size: 2rem;
+        letter-spacing: 0.15rem;
+      }
+      label {
+        font-size: 1rem;
+      }
+      input.form-control {
+        font-size: 1rem;
+      }
+      .btn-primary {
+        font-size: 1.1rem;
+        padding: 0.6rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <article class="card" role="main" aria-labelledby="form-cadastro-title">
+    <h1 id="form-cadastro-title" class="form-title">Cadastro</h1>
+    <form class="needs-validation" novalidate>
+      <div class="mb-4">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="text" class="form-control" id="nome" placeholder="Digite seu nome completo" required aria-required="true" aria-describedby="nomeHelp" />
+        <div class="invalid-feedback">
+          Por favor, informe seu nome.
+        </div>
+      </div>
+      <div class="mb-4">
+        <label for="email" class="form-label">E-mail</label>
+        <input type="email" class="form-control" id="email" placeholder="exemplo@dominio.com" required aria-required="true" />
+        <div class="invalid-feedback">
+          Por favor, insira um e-mail válido.
+        </div>
+      </div>
+      <div class="mb-5">
+        <label for="telefone" class="form-label">Telefone</label>
+        <input type="tel" class="form-control" id="telefone" placeholder="(00) 00000-0000" pattern="\(\d{2}\) \d{4,5}-\d{4}" required aria-required="true" />
+        <div class="invalid-feedback">
+          Por favor, informe um telefone no formato (00) 00000-0000.
+        </div>
+      </div>
+      <button class="btn btn-primary w-100" type="submit" aria-label="Enviar formulário de cadastro">Enviar</button>
+    </form>
+  </article>
+
+  <!-- Bootstrap JS Bundle with Popper via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Bootstrap custom validation with accessible focus handling
+    (() => {
+      'use strict'
+      const forms = document.querySelectorAll('.needs-validation')
+      Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+            // Focus first invalid element
+            const firstInvalid = form.querySelector(':invalid')
+            if (firstInvalid) {
+              firstInvalid.focus()
+            }
+          }
+          form.classList.add('was-validated')
+        }, false)
+      })
+    })()
+  </script>
+</body>
+</html>
