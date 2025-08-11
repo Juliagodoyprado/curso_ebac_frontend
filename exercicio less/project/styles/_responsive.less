@@ -1,0 +1,26 @@
+@media screen and (max-width: @breakpoints[tablet]) {
+    .container {
+        max-width: @layout[container-mobile-width];
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 48.5%);
+        column-gap: 3%;
+    }
+}
+
+@media screen and (max-width: @breakpoints[mobile]) {
+    .products {
+        display: block;
+    }
+
+    .product-item {
+        margin-bottom: @spacing[xlarge];
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: @spacing[medium];
+        text-align: center;
+    }
+}
