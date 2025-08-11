@@ -1,0 +1,26 @@
+.footer {
+    background-color: @colors[primary];
+    padding: @spacing[medium] 0;
+    color: @colors[text-light];
+    
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .social-links {
+        display: flex;
+        gap: @spacing[medium];
+    }
+    
+    .social-link img {
+        width: 24px;
+        height: 24px;
+        transition: transform 0.3s ease;
+        
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
