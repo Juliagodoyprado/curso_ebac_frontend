@@ -1,0 +1,57 @@
+// Variáveis
+@primary-color: #3498db;
+@secondary-color: #2ecc71;
+@text-color: #333;
+@font-stack: Helvetica, Arial, sans-serif;
+
+// Mixins
+.border-radius(@radius) {
+  border-radius: @radius;
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+}
+
+// Estilos base
+body {
+  font-family: @font-stack;
+  color: @text-color;
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+}
+
+// Componentes
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: @primary-color;
+  color: white;
+  text-decoration: none;
+  .border-radius(5px);
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: darken(@primary-color, 10%);
+  }
+}
+
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  .border-radius(4px);
+
+  &-success {
+    background-color: lighten(@secondary-color, 30%);
+    border-color: @secondary-color;
+    color: darken(@secondary-color, 20%);
+  }
+}
+
+// Layout
+.header {
+  background-color: @primary-color;
+  color: white;
+  padding: 20px;
+  margin-bottom: 30px;
+}
