@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festa de Aniversário - 17/07</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>23 ANOS</h1>
+            <p>Celebrando uma vida incrível</p>
+            <div class="countdown" id="countdown"></div>
+        </div>
+    </header>
+
+    <section class="about">
+        <div class="container">
+            <h2>17 de Julho de 2002</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Um dia especial que marcou o início de uma jornada única. Em 2002, o mundo ganhou alguém especial que viria a fazer a diferença na vida de muitas pessoas.</p>
+                    <p>Este ano celebramos 23 anos de histórias, conquistas e momentos inesquecíveis!</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Bolos de aniversário">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="event-details">
+        <div class="container">
+            <h2>Detalhes do Evento</h2>
+            <div class="details-grid">
+                <div class="detail-card">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h3>Data</h3>
+                    <p>17 de Julho de 2023</p>
+                </div>
+                <div class="detail-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Horário</h3>
+                    <p>19:00 até 23:00</p>
+                </div>
+                <div class="detail-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Local</h3>
+                    <p>Salão de Festas Primavera</p>
+                    <p>Rua das Flores, 123</p>
+                </div>
+                <div class="detail-card">
+                    <i class="fas fa-gift"></i>
+                    <h3>Traga</h3>
+                    <p>Sua energia positiva e vontade de se divertir!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <div class="container">
+            <h2>Memórias</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1527481138388-31827a7c94d5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Memória 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1517842645767-c639042777db?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Memória 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Memória 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Memória 4">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="rsvp">
+        <div class="container">
+            <h2>Confirme sua presença</h2>
+            <form id="rsvp-form">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Seu nome" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Seu e-mail" required>
+                </div>
+                <div class="form-group">
+                    <select id="guests" required>
+                        <option value="" disabled selected>Número de acompanhantes</option>
+                        <option value="0">Vou sozinho(a)</option>
+                        <option value="1">+1 acompanhante</option>
+                        <option value="2">+2 acompanhantes</option>
+                        <option value="3">+3 acompanhantes</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Confirmar Presença</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2023 Celebração de 20 anos - 17/07/2002</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
